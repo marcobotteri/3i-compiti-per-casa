@@ -1,24 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int inverti(int);
+int inverti(int, int);
 
-main()
-{
-    int n;
-    cout<<"Inserire un numero intero:";
-    cin>>n;
-    cout<<"\nL'inverso del numero inserito e':"<<inverti();
+main(){
+int numero;
+int inverso=0;
+cout<<"Inserire un numero: "<<endl;
+cin>>numero;
+cout<<"Il numero invertito e' "<<inverti(numero, inverso)<<endl;
+
 }
 
-int inverti(int n)
+int inverti(int numero, int inverso)
 {
-    int primacifra=n%10;
-    int secondacifra=(n/10)%10;
-    int terzacifra=(n/100)%10;
-    int quartacifra=(n/1000)%10;
-    if (secondacifra==0) return primacifra;
-    if (terzacifra==0) return primacifra*10+secondacifra;
-    if (quartacifra==0) return primacifra*100+secondacifra*10+terzacifra;
-
+    if(numero==0)
+        return inverso;
+    else
+    {
+        inverso=inverso*10+numero%10;
+        return inverti(numero/10, inverso);
+    }
 }
