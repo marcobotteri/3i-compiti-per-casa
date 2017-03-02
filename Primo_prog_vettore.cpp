@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 using namespace std;
 int ottienidimensione (void);
 
@@ -10,6 +10,10 @@ int main(){
     for (int i=0; i < numelementi; i++) {
         cout << "Inserisci il " << i+1 << " elemento: ";
         cin >> v[i];
+    }
+    cout<<"Ecco l'indirizzo di partenza dell'array : "<<v<<endl;
+    for (int i=0; i < 10; i++) {
+        cout<<"Ecco il "<<i+1<<" elemento : "<<v[i]<<endl;
     }
     system("PAUSE");
     return 0;
