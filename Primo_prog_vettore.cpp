@@ -12,7 +12,7 @@ int main(){
         cin >> v[i];
     }
     cout<<"Ecco l'indirizzo di partenza dell'array : "<<v<<endl;
-    for (int i=0; i < 10; i++) {
+    for (int i=0; i < numelementi; i++) {
         cout<<"Ecco il "<<i+1<<" elemento : "<<v[i]<<endl;
     }
     system("PAUSE");
