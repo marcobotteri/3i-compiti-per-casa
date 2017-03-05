@@ -14,19 +14,13 @@ cin>>numeri;} while(numeri>10);
 for(i=0;i<numeri;i++)
 {
     cout<<"Inserire il "<<i+1<<" numero: ";
-    cin>>
-    v[i];
+    cin>>v[i];
 }
-for(i=1;i<=numeri;i=i+2)
+for(i=0;i<numeri;i++)
 {
-    mp*=v[i];
+    if(i%2==1) mp*=v[i];
+    else sd+=v[i];
 }
 cout<<"Il prodotto dei numeri di posto pari e': "<<mp<<endl;
-
-//non funziona la somma
-for(i=0;i<=numeri;i=i+2)
-{
-    sd+=v[i];
-}
 cout<<"La somma dei numeri di posto dispari e': "<<sd<<endl;
 }
