@@ -1,5 +1,7 @@
+#include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
+using namespace std;
 main()
 {
 int i,j;
@@ -14,10 +16,10 @@ for(j=0;j<(100/i)+1;j++)
 array[i*j]=0;
 }
 }
-printf("\n numeri primi <100\n");
+cout<<"\n numeri primi <100\n";
 for(i=1;i<100;i++)
 {
-if(array[i]=0)printf("\t%d",i);
+if(array[i]==0)cout<<i<<" ";
 }
 system("PAUSE");
 }
