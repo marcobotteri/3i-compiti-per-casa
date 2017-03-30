@@ -14,20 +14,25 @@ int main(){
 }
 
 void selection_sort(int v[], int dim){
-    int comodo;
+    int comodo, pos;
     for (int i = 0; i < dim-1; i++){
-            comodo = v[i];
+            pos=i;
         for (int j = i+1; j < dim; j++){
-            if(v[j]<comodo)comodo=v[j];
-            if(j==dim-1) v[i]=comodo;
+            if(v[j]<v[pos]){
+            pos=j;
+                }
+        }
+        comodo=v[pos];
+        v[pos]=v[i];
+        v[i]=comodo;
+
+    }
+}
             /*if (v[i] > v[j]){
                 comodo = v[i];
                 v[i] = v[j];
                 v[j] = comodo;
             }*/
-        }
-    }
-}
 
 
 void stampa(int v[], int dim){
