@@ -41,7 +41,7 @@ bool controlloVittoria(int numero, int num_segreto, bool& vittoria){
             vittoria=true;
             cout<<"Hai indovinato il numero"<<endl;
     }
-    else cout<<endl<<"Ritenta"<<endl;
+
 }
 
 
@@ -50,5 +50,6 @@ bool controlloSconfitta(int tentativo, int tentativi_max, bool vittoria, bool& s
             sconfitta=true;
             cout<<"Hai perso"<<endl;
             }
+        else if (vittoria==false) cout<<endl<<"Ritenta"<<endl;
 }
 
